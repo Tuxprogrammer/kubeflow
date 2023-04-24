@@ -1,5 +1,5 @@
 # Use the respective Makefile to build the image.
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 # common environemnt variables
 ENV NB_USER jovyan
@@ -10,7 +10,7 @@ ENV SHELL /bin/bash
 
 # args - software versions
 ARG KUBECTL_ARCH="amd64"
-ARG KUBECTL_VERSION=v1.21.0
+ARG KUBECTL_VERSION=v1.26.3
 ARG S6_ARCH="amd64"
  # renovate: datasource=github-tags depName=just-containers/s6-overlay versioning=loose
 ARG S6_VERSION=v2.2.0.3
