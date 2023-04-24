@@ -1,5 +1,5 @@
 TAG ?= $(shell git describe --tags --always --dirty)
-REGISTRY ?= tuxhpc-notebook
+REGISTRY ?= tuxhpc/notebook
 
 
 .PHONY: docker-build
