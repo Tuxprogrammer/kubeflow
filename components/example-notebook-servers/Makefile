@@ -48,7 +48,7 @@ build-rstudio-tidyverse:
 	$(MAKE) docker-build -C rstudio-tidyverse TAG=${TAG}
 
 .PHONY: docker-push
-docker-push:
+docker-push: docker-build
 	@echo "\nPushing base image...\n"
 	$(MAKE) docker-push -C base
 

@@ -7,5 +7,5 @@ docker-build-jupyter:
 docker-build: docker-build-jupyter
 	docker build -t ${REGISTRY}/jupyter-scipy:${TAG} --build-arg BASE_IMG=${REGISTRY}/jupyter:${TAG} -f Dockerfile . 
 
-docker-push:
+docker-push: docker-build
 	docker push ${REGISTRY}/jupyter-scipy:${TAG}

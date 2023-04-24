@@ -13,8 +13,10 @@ docker-build-cpu: docker-build-jupyter-pytorch
 docker-build-cuda: docker-build-jupyter-pytorch-cuda
 	docker build -t ${REGISTRY}/jupyter-pytorch-cuda-full:${TAG} --build-arg BASE_IMG=${REGISTRY}/jupyter-pytorch-cuda:${TAG} -f cuda.Dockerfile . 
 
-docker-push-cpu:
+docker-push-cpu: docker-build-cpu
 	docker push ${REGISTRY}/jupyter-pytorch-full:${TAG}
 
-docker-push-cuda:
+docker-push-cuda: docker-build-cuda
 	docker push ${REGISTRY}/jupyter-pytorch-cuda-full:${TAG}
+
+docker-push: docker-push-cpu docker-push-cuda
