@@ -1,5 +1,5 @@
 TAG ?= $(shell git describe --tags --always --dirty)
-REGISTRY ?= tuxhpc
+REGISTRY ?= tuxhpc-notebook
 
 docker-build-jupyter-pytorch:
 	$(MAKE) docker-build-cpu -C ../jupyter-pytorch TAG=${TAG} 

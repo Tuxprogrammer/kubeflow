@@ -1,4 +1,4 @@
-REGISTRY ?= tuxhpc
+REGISTRY ?= tuxhpc-notebook
 TAG ?= $(shell git describe --tags --always --dirty)
 
 SUBDIRS := access-management admission-webhook centraldashboard crud-web-apps/jupyter crud-web-apps/tensorboards \

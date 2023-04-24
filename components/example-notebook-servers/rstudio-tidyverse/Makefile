@@ -1,5 +1,5 @@
 TAG ?= $(shell git describe --tags --always --dirty)
-REGISTRY ?= tuxhpc
+REGISTRY ?= tuxhpc-notebook
 
 docker-build-rstudio:
 	$(MAKE) docker-build -C ../rstudio TAG=${TAG} 
